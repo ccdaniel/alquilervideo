@@ -1,5 +1,5 @@
 <html>
-     <head><title>Mi Web</title></head>
+     <head><title>ALQUILER DE VIDEOJUEGOS</title></head>
       <body text = "white" bgcolor = "black">
             <b>para poder adquilar ingrese los siguientes datos</b><br><br>			
 			<form action="mostrar.php" method="get">
