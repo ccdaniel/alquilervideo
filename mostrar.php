@@ -49,11 +49,24 @@
 							   echo "<td> <b>CANTIDAD : </b>",$reg['cantidad']; echo"</td>";
 				               echo "<td> <a href='alquilar.php?a=$reg[id]&b=$cedula' >ALQUILAR</a></td>";
 			        echo "</tr>";
-					
+		    
+            			
+				}
+			echo "</table>";
+		    echo"</td></td><center><h3> HAS ALQUILADO</center></h3>";
+         	echo "<table border = '1'>";	
+		    	$consulta2 = mysql_query("SELECT * FROM prestamos  INNER JOIN videojuegos WHERE prestamos.id = videojuegos.id and cedula = '$cedula'") or die ("error en consulta de prestamos".mysql_error());
+			    while($reg2 =mysql_fetch_array($consulta2)){
+					echo "<tr>";
+					       echo "<td> <b>TITULO: <H2> ",$reg2['nombre']; echo"</b></H2></td>";
+						   echo "<td> <b>PRECIO: <H2> ",$reg2['precio']; echo"</b></H2></td>";
+						   echo "<td> <b>FECHA:  <H2> ",$reg2['fecha']; echo"</b></H2></td>";
+				    echo"</tr>";
 				}
 			 mysql_close()		
-		     ?>
-		    
+		     
+			 ?>
+		     
 			    
 			 
              
